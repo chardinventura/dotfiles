@@ -1,0 +1,88 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+# Global properties
+full_text=
+align=center
+separator=false
+separator_block_width=0
+
+SCRIPT_DIR=/home/chardinventura/.config/i3blocks/scripts
+
+[volume-pulseaudio]
+command=$SCRIPT_DIR/volume-pulseaudio
+LONG_FORMAT="${SYMB}${VOL}%"
+AUDIO_MED_THRESH=50
+interval=once
+signal=1
+
+[separator]
+background=#0D0D0D
+color=#4F4F4F
+
+[brightness]
+label=  
+command=echo "$(($(brightnessctl g) * 100 / $(brightnessctl m)))% "
+interval=once
+signal=2
+color=#EFEFEF
+background=#4F4F4F
+
+[separator]
+background=#4F4F4F
+color=#0D0D0D
+
+[battery2]
+label= 
+command=$SCRIPT_DIR/battery2
+markup=pango
+interval=1
+
+[separator]
+background=#0D0D0D
+color=#4F4F4F
+
+[memory]
+label=  
+command=$SCRIPT_DIR/memory
+interval=1
+background=#4F4F4F
+
+[separator]
+background=#4F4F4F
+color=#0D0D0D
+
+[cpu_usage2]
+LABEL=  
+command=$SCRIPT_DIR/cpu_usage2
+markup=pango
+interval=persist
+
+[separator]
+background=#0D0D0D0
+color=#4F4F4F
+
+[time]
+label=  
+command=date '+%H:%M '
+interval=1
+background=#4F4F4F
+
+[separator]
+background=#4F4F4F
+color=#0D0D0D0
+
+[date]
+label=  
+command=date '+%a, %b %d %Y '
+interval=1
+
+#[bandwidth]
+#label=
+#command=$SCRIPT_DIR/bandwidth2
+#interval=persist
+#markup=pango
