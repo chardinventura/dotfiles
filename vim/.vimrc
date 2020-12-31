@@ -4,9 +4,9 @@ call plug#begin('~/.vim/plugged')
 
 " Visual
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'lilydjwg/colorizer'
-Plug 'sickill/vim-monokai'
 
 " Auto close parantheses
 Plug 'jiangmiao/auto-pairs'
@@ -95,11 +95,12 @@ imap <C-P> <Esc>:bprevious<CR>i
 "nmap <Leader>qq :q<CR>
 "nmap <Leader>x :x<CR>
 
-" Bug with background and suggetions menu
-" colorscheme monokai
-
 " Change background
 set background="dark"
+
+" Bug with background and suggetions menu
+colorscheme zellner
+
 
 if &t_Co > 2
 	syntax on

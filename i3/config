@@ -22,8 +22,8 @@ bindsym Mod1+a exec amixer -q -D pulse sset Master 2%- && pkill -RTMIN+1 i3block
 bindsym Mod1+m exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+1 i3blocks
 
 # Use xbacklight to adjust brightness
-bindsym Mod1+u $exec brightnessctl s 2%+ && pkill -RTMIN+2 i3blocks
-bindsym Mod1+e $exec brightnessctl s 2%- && pkill -RTMIN+2 i3blocks
+bindsym Mod1+u $exec brightnessctl s 1%+ && pkill -RTMIN+2 i3blocks
+bindsym Mod1+e $exec brightnessctl s 1%- && pkill -RTMIN+2 i3blocks
 
 # Media player controls
  bindsym Mod1+p exec playerctl play-pause
@@ -38,11 +38,10 @@ bindsym Control+Shift+Print exec (flameshot &) && flameshot gui
 $exec feh --no-fehbg --bg-fill '/home/chardinventura/Pictures/wallpapers/desktop.png'
 
 # Suspend after 10 mts when pr is inactive
-exec xautolock -time 10 -locker "systemctl suspend" &
+exec xautolock -time 10 -locker "i3lock -i ~/Pictures/wallpapers/desktop.png && systemctl suspend" &
 
 # Suspend pc
-bindsym Mod1+Shift+s exec systemctl suspend
-
+bindsym Mod1+Shift+s exec i3lock -i ~/Pictures/wallpapers/desktop.png && systemctl suspend
 # start a terminal
 bindsym Mod1+Return exec alacritty
 

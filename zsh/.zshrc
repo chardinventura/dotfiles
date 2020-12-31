@@ -104,6 +104,18 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Change output audio
+alias audio-laptop="pactl set-card-profile 0 output:analog-stereo"
+alias audio-hdmi="pactl set-card-profile 0 output:hdmi-stereo"
+
+# Change output screen
+alias screen-laptop="echo \"Not implemented\""
+alias screen-hdmi="echo \"Not implemented\""
+
+# Gradle
+alias run="./gradlew -q bootrun"
+
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
