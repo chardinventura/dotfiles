@@ -2,6 +2,9 @@
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t' " Show only the name of the buffer
 
+" Show buffers opened with coc
+let g:airline#extensions#tabline#enabled = 0
+
 " Change the separators to triangles
 let g:airline_powerline_fonts = 1
 

@@ -28,7 +28,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
-syntax enable
 set clipboard=unnamedplus
 set nowrap
 set cursorline
@@ -95,17 +94,9 @@ imap <C-P> <Esc>:bprevious<CR>i
 "nmap <Leader>qq :q<CR>
 "nmap <Leader>x :x<CR>
 
-" Change background
-set background="dark"
-
-" Bug with background and suggetions menu
-colorscheme zellner
-
-
 if &t_Co > 2
 	syntax on
-	silent! colorscheme dim
-	set background=dark
+	silent! colorscheme slate
 
 	highlight Folded cterm=reverse ctermbg=0 ctermfg=8
 	highlight VertSplit cterm=NONE ctermbg=NONE ctermfg=8
