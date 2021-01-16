@@ -1,0 +1,33 @@
+set rnu
+
+let mapleader = " "
+
+:map <leader>ru <Action>(Run)
+:map <leader>run <Action>(ChooseRunConfiguration)
+:map <leader>rr <Action>(Rerun)
+:map <leader>s <Action>(Stop)
+
+:map <leader>n <Action>(NextTab)
+:map <leader>p <Action>(PreviousTab)
+
+:map <leader>oi <Action>(OptimizeImports)
+:map <leader>g <Action>(Generate)
+:map <leader>rn <Action>(Refactorings.QuickListPopupAction)
+
+:map <leader><tab> <Action>(ActivateProjectToolWindow)
+:map <leader>q <Action>(HideActiveWindow)
+
+:map <leader>t <Action>(ActivateTerminalToolWindow)
+
+:map <up> <Action>(StretchSplitToTop)
+:map <down> <Action>(StretchSplitToBottom)
+:map <left> <Action>(StretchSplitToLeft)
+:map <right> <Action>(StretchSplitToRight)
+
+:map <leader>vs <Action>(SplitVertically)
+:map <leader>vp <Action>(SplitHorizontally)
+
+:map <leader>l <Action>(NextSplitter)
+:map <leader>h <Action>(PrevSplitter)
+
+:map <leader>c <Action>(CloseContent)

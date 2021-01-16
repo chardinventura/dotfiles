@@ -1,5 +1,5 @@
 # You can also use any non-zero value if you'd like to have a border
-for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 2
 
 # i3 config file (v4)
 #
@@ -26,9 +26,14 @@ bindsym Mod1+u $exec brightnessctl s 1%+ && pkill -RTMIN+2 i3blocks
 bindsym Mod1+e $exec brightnessctl s 1%- && pkill -RTMIN+2 i3blocks
 
 # Media player controls
- bindsym Mod1+p exec playerctl play-pause
- bindsym Mod1+period exec playerctl next
- bindsym Mod1+comma exec playerctl previous
+bindsym Mod1+p exec playerctl play-pause
+bindsym Mod1+period exec playerctl next
+bindsym Mod1+comma exec playerctl previous
+
+# Moc controls
+bindsym Mod1+Control+p exec mocp --toggle-pause
+bindsym Mod1+Control+period exec mocp --next
+bindsym Mod1+Control+comma exec mocp --previous
 
 # Print screen
 bindsym Print exec (flameshot &) && flameshot full -p $HOME/Pictures
@@ -38,10 +43,11 @@ bindsym Control+Shift+Print exec (flameshot &) && flameshot gui
 $exec feh --no-fehbg --bg-fill '/home/chardinventura/Pictures/wallpapers/desktop.png'
 
 # Suspend after 10 mts when pr is inactive
-exec xautolock -time 10 -locker "i3lock -i ~/Pictures/wallpapers/desktop.png && systemctl suspend" &
+$exec xautolock -time 10 -locker "i3lock -i ~/Pictures/wallpapers/desktop.png ; systemctl suspend"
 
 # Suspend pc
-bindsym Mod1+Shift+s exec i3lock -i ~/Pictures/wallpapers/desktop.png && systemctl suspend
+bindsym Mod1+Shift+s exec xautolock -locknow
+
 # start a terminal
 bindsym Mod1+Return exec alacritty
 
@@ -73,6 +79,9 @@ bindsym Mod1+control+l layout toggle split
 
 # toggle tiling / floating
 bindsym Mod1+Control+space floating toggle
+
+# change focus between tiling / floating windows
+#bindsym Mod1+space focus mode_toggle
 
 workspace_layout tabbed
 

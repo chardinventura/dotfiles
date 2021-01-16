@@ -62,8 +62,6 @@ else:
             # exit code 33 will turn background red
             return "#FFFFFF"
         if percent < 20:
-            if percent == 10 and state == "Discharging":
-                subprocess.run(['systemctl', 'suspend'])
             return "#FF3300"
         if percent < 30:
             return "#FF6600"
