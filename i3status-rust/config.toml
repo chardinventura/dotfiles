@@ -1,0 +1,29 @@
+theme = "modern"
+icons = "awesome"
+
+[[block]]
+block = "sound"
+
+[[block]]
+block = "backlight"
+
+[[block]]
+block = "cpu"
+interval = 1
+format = "{barchart} {frequency}GHz {utilization}%"
+
+[[block]]
+block = "memory"
+display_type = "memory"
+format_mem = "{Mug} GiB"
+format_swap = "{SUp}%"
+
+[[block]]
+block = "battery"
+driver = "upower"
+format = "{percentage}% {time}"
+
+[[block]]
+block = "time"
+interval = 60
+format = "%R %a, %b %d %Y"

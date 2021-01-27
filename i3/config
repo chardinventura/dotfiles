@@ -22,8 +22,8 @@ bindsym Mod1+a exec amixer -q -D pulse sset Master 2%- && pkill -RTMIN+1 i3block
 bindsym Mod1+m exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+1 i3blocks
 
 # Use xbacklight to adjust brightness
-bindsym Mod1+u $exec brightnessctl s 1%+ && pkill -RTMIN+2 i3blocks
-bindsym Mod1+e $exec brightnessctl s 1%- && pkill -RTMIN+2 i3blocks
+bindsym Mod1+u $exec brightnessctl s 7+ && pkill -RTMIN+2 i3blocks
+bindsym Mod1+e $exec brightnessctl s 7- && pkill -RTMIN+2 i3blocks
 
 # Media player controls
 bindsym Mod1+p exec playerctl play-pause
@@ -38,7 +38,7 @@ bindsym Mod1+Control+comma exec mocp --previous
 # Print screen
 bindsym Print exec (flameshot &) && flameshot full -p $HOME/Pictures
 bindsym Control+Print exec (flameshot &) && flameshot full -c
-bindsym Control+Shift+Print exec (flameshot &) && flameshot gui
+bindsym Control+Shift+Print exec (flameshot &) && sleep 3 && flameshot gui
 # set wallpaper
 $exec feh --no-fehbg --bg-fill '/home/chardinventura/Pictures/wallpapers/desktop.png'
 
@@ -81,7 +81,7 @@ bindsym Mod1+control+l layout toggle split
 bindsym Mod1+Control+space floating toggle
 
 # change focus between tiling / floating windows
-#bindsym Mod1+space focus mode_toggle
+bindsym Mod1+space focus mode_toggle
 
 workspace_layout tabbed
 
@@ -160,11 +160,26 @@ bindsym Mod1+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+#bar {
+#		position top
+#        status_command i3blocks
+#        binding_mode_indicator yes
+#        colors {
+#        	background #0D0D0D0
+#    	}
+#}
+
 bar {
-		position top
-        status_command i3blocks
-        binding_mode_indicator yes
-        colors {
-        	background #0D0D0D0
-    	}
+	position top
+	status_command /bin/i3status-rs ~/.config/i3status-rust/config.toml
+
+	colors {
+        separator #666666
+        background #222222
+        statusline #dddddd
+        focused_workspace #0088CC #0088CC #ffffff
+        active_workspace #333333 #333333 #ffffff
+        inactive_workspace #333333 #333333 #888888
+        urgent_workspace #2f343a #900000 #ffffff
+    }
 }

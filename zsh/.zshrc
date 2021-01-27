@@ -106,17 +106,36 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Change output audio
-alias audio-laptop="pactl set-card-profile 0 output:analog-stereo"
-alias audio-hdmi="pactl set-card-profile 0 output:hdmi-stereo"
+alias laptop-audio="pactl set-card-profile alsa_card.pci-0000_00_1f.3 output:analog-stereo+input:analog-stereo"
+alias hdmi-audio="pactl set-card-profile alsa_card.pci-0000_00_1f.3 output:hdmi-stereo"
 
 # Change output screen
-alias screen-laptop="echo \"Not implemented\""
-alias screen-hdmi="echo \"Not implemented\""
+alias laptop-screen="xrandr --output eDP-1 --mode 1366x768"
+alias laptop-screen-off="xrandr --output eDP-1 --off"
+alias hdmi-screen="xrandr --output HDMI-1 --mode 1366x768"
+alias hdmi-screen-off="xrandr --output HDMI-1 --off"
+
+# Change status MariaDB
+alias mariadb-start="systemctl start mariadb.service"
+alias mariadb-stop="systemctl stop mariadb.service "
+
+# Change status MariaDB
+alias bluetooth-start="systemctl start bluetooth.target"
+alias bluetooth-stop="systemctl stop bluetooth.target "
 
 # Gradle
 alias run="./gradlew -q bootrun"
+
+# Print pretty JSON
+alias prettyjson='python -m json.tool'
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+PATH="/home/chardinventura/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/chardinventura/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/chardinventura/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/chardinventura/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/chardinventura/perl5"; export PERL_MM_OPT;
