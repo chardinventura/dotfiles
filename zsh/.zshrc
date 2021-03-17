@@ -8,6 +8,10 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# PSPDEV
+export PSPDEV=/usr/local/pspdev
+export PATH=$PATH:$PSPDEV/bin
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/chardinventura/.oh-my-zsh"
 
@@ -121,7 +125,7 @@ alias mariadb-stop="systemctl stop mariadb.service "
 
 # Change status MariaDB
 alias bluetooth-start="systemctl start bluetooth.target"
-alias bluetooth-stop="systemctl stop bluetooth.target "
+alias bluetooth-stop="systemctl stop bluetooth./arget "
 
 # Gradle
 alias run="./gradlew -q bootrun"

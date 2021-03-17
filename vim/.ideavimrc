@@ -1,4 +1,6 @@
 set rnu
+set NERDTree
+set easymotion
 
 let mapleader = " "
 
@@ -14,7 +16,7 @@ let mapleader = " "
 :map <leader>g <Action>(Generate)
 :map <leader>rn <Action>(Refactorings.QuickListPopupAction)
 
-:map <leader><tab> <Action>(ActivateProjectToolWindow)
+:map <leader><tab> :NERDTree<CR>
 :map <leader>q <Action>(HideActiveWindow)
 
 :map <leader>t <Action>(ActivateTerminalToolWindow)
@@ -31,3 +33,4 @@ let mapleader = " "
 :map <leader>h <Action>(PrevSplitter)
 
 :map <leader>c <Action>(CloseContent)
+:map <leader><CR> <Action>(ReformatCode)

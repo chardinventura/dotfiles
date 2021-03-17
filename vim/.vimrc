@@ -28,6 +28,10 @@ Plug 'easymotion/vim-easymotion'
 " Language Server Protocol
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Live html, css, and javascript
+Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
+Plug 'mattn/emmet-vim'
+
 call plug#end()
 
 set clipboard=unnamedplus

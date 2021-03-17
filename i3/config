@@ -1,5 +1,5 @@
 # You can also use any non-zero value if you'd like to have a border
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 3
 
 # i3 config file (v4)
 #
@@ -17,13 +17,13 @@ font pango:JuliaMono 8
 #font pango:DejaVu Sans Mono 8
 
 # Use amixer to adjust volume in PulseAudio.
-bindsym Mod1+o exec amixer -q -D pulse sset Master 2%+ && pkill -RTMIN+1 i3blocks
-bindsym Mod1+a exec amixer -q -D pulse sset Master 2%- && pkill -RTMIN+1 i3blocks
-bindsym Mod1+m exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+1 i3blocks
+bindsym Mod1+o exec amixer -q -D pulse sset Master 2%+ # && pkill -RTMIN+1 i3blocks
+bindsym Mod1+a exec amixer -q -D pulse sset Master 2%- # && pkill -RTMIN+1 i3blocks
+bindsym Mod1+m exec amixer -q -D pulse sset Master toggle # && pkill -RTMIN+1 i3blocks
 
 # Use xbacklight to adjust brightness
-bindsym Mod1+u $exec brightnessctl s 7+ && pkill -RTMIN+2 i3blocks
-bindsym Mod1+e $exec brightnessctl s 7- && pkill -RTMIN+2 i3blocks
+bindsym Mod1+u $exec brightnessctl s 7+ # && pkill -RTMIN+2 i3blocks
+bindsym Mod1+e $exec brightnessctl s 7- # && pkill -RTMIN+2 i3blocks
 
 # Media player controls
 bindsym Mod1+p exec playerctl play-pause
