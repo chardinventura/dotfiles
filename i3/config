@@ -38,7 +38,7 @@ bindsym Mod1+Control+comma exec mocp --previous
 # Print screen
 bindsym Print exec (flameshot &) && flameshot full -p $HOME/Pictures
 bindsym Control+Print exec (flameshot &) && flameshot full -c
-bindsym Control+Shift+Print exec (flameshot &) && sleep 3 && flameshot gui
+bindsym Control+Shift+Print exec (flameshot &) && sleep 1 && flameshot gui
 # set wallpaper
 $exec feh --no-fehbg --bg-fill '/home/chardinventura/Pictures/wallpapers/desktop.png'
 

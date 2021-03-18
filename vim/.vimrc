@@ -27,10 +27,10 @@ Plug 'easymotion/vim-easymotion'
 
 " Language Server Protocol
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+let g:coc_global_extensions = ['coc-clangd', 'coc-css', 'coc-emmet', 'coc-groovy', 'coc-html', 'coc-java', 'coc-json', 'coc-snippets']
 
 " Live html, css, and javascript
 Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
-Plug 'mattn/emmet-vim'
 
 call plug#end()
 
@@ -94,11 +94,6 @@ map <C-P> :bprevious<CR>
 
 imap <C-N> <Esc>:bnext<CR>i
 imap <C-P> <Esc>:bprevious<CR>i
-
-" Write, close, close unsafety and close safety
-"nmap <Leader>w :w<CR>
-"nmap <Leader>qq :q<CR>
-"nmap <Leader>x :x<CR>
 
 if &t_Co > 2
 	syntax on
