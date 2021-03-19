@@ -8,16 +8,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'lilydjwg/colorizer'
 
-Plug 'alvan/vim-closetag'
-
 " Auto close parantheses
 Plug 'jiangmiao/auto-pairs'
-
-" Git
-Plug 'mhinz/vim-signify'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
-Plug 'junegunn/gv.vim'
 
 " File manager
 Plug 'scrooloose/nerdtree'
@@ -27,7 +19,6 @@ Plug 'easymotion/vim-easymotion'
 
 " Language Server Protocol
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = ['coc-clangd', 'coc-css', 'coc-emmet', 'coc-groovy', 'coc-html', 'coc-java', 'coc-json', 'coc-snippets']
 
 " Live html, css, and javascript
 Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
@@ -77,7 +68,7 @@ nnoremap <silent> <down> :resize -5<CR>
 nnoremap <leader>vs :vsp 
 
 " Do horizontal split
-nnoremap <leader>sp :sp 
+nnoremap <leader>vp :sp 
 
 " Move between windows
 nnoremap <leader>h :wincmd h<CR>
@@ -86,32 +77,13 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
 " Move between buffers
-nnoremap <Leader>b :buffers<CR>:buffer 
 nnoremap  <Leader>d :bdelete<CR>
 
-map <C-N> :bnext<CR>
-map <C-P> :bprevious<CR>
-
 imap <C-N> <Esc>:bnext<CR>i
+map <C-N> :bnext<CR>
 imap <C-P> <Esc>:bprevious<CR>i
-
-if &t_Co > 2
-	syntax on
-	silent! colorscheme slate
-
-	highlight Folded cterm=reverse ctermbg=0 ctermfg=8
-	highlight VertSplit cterm=NONE ctermbg=NONE ctermfg=8
-	highlight Conceal cterm=NONE ctermbg=NONE ctermfg=8
-
-	highlight DiffAdd ctermfg=green cterm=bold
-	highlight DiffDelete ctermfg=red cterm=bold
-	highlight DiffChange ctermfg=yellow
-
-	" Sometimes I see the syntax be out of sync
-	noremap <F12> <Esc>:syntax sync fromstart<CR>
-	inoremap <F12> <C-o>:syntax sync fromstart<CR>
-endif
-
+map <C-P> :bprevious<CR>
+  
 " Mark trailing spaces depending on whether we have a fancy terminal or not
 if &t_Co > 2
 	highlight ExtraWhitespace ctermbg=1
