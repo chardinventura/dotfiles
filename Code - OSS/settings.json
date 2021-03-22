@@ -1,0 +1,161 @@
+{
+    "html.autoClosingTags": true,
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.signatureHelp.enabled": true,
+    "vim.easymotion": true,
+    "vim.leader": " ",
+    "vim.searchHighlightColor": "#F44",
+    "vim.smartRelativeLine": true,
+    "vim.statusBarColorControl": true,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#005f5f",
+        "statusBar.noFolderBackground": "#005f5f",
+        "statusBar.debuggingBackground": "#005f5f"
+    },
+    "java.project.importOnFirstTimeStartup": "automatic",
+    "java.refactor.renameFromFileExplorer": "autoApply",
+    "vim.highlightedyank.enable": true,
+    "vim.useSystemClipboard": true,
+    "vim.camelCaseMotion.enable": true,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "<leader>",
+                "a",
+                "c"
+            ],
+            "commands": [
+                "editor.action.sourceAction"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "n"
+            ],
+            "commands": [
+                ":bnext"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "p"
+            ],
+            "commands": [
+                ":bprevious"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "<enter>"
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "r",
+                "n"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "D"
+            ],
+            "commands": [
+                "editor.action.goToTypeDefinition"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "i"
+            ],
+            "commands": [
+                "editor.action.goToImplementation"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "r"
+            ],
+            "commands": [
+                "editor.action.goToReferences"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "r",
+                "u",
+                "n"
+            ],
+            "commands": [
+                "workbench.action.debug.start"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "r",
+                "r"
+            ],
+            "commands": [
+                "workbench.action.debug.restart"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "s"
+            ],
+            "commands": [
+                "workbench.action.debug.stop"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "<tab>"
+            ],
+            "commands": [
+                "workbench.view.explorer"
+            ]
+        },{
+            "before": [
+                "<leader>",
+                "o",
+                "i"
+            ],
+            "commands": [
+                "editor.action.organizeImports"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                "<leader>",
+                "a"
+            ],
+            "commands": [
+                "editor.action.sourceAction"
+            ]
+        }
+    ]
+}
