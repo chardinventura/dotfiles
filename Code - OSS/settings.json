@@ -145,6 +145,15 @@
             "commands": [
                 "editor.action.organizeImports"
             ]
+        },{
+            "before": [
+                "<leader>",
+                "q",
+                "f"
+            ],
+            "commands": [
+                "editor.action.quickFix"
+            ]
         }
     ],
     "vim.visualModeKeyBindings": [
@@ -157,5 +166,6 @@
                 "editor.action.sourceAction"
             ]
         }
-    ]
+    ],
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/chardinventura/.vscode-oss/extensions/gabrielbb.vscode-lombok-1.0.0/server/lombok.jar\""
 }
