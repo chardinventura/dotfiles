@@ -14,9 +14,37 @@
     "vim.smartRelativeLine": true,
     "vim.statusBarColorControl": true,
     "workbench.colorCustomizations": {
+        "[Mayukai Dark]": {
+            "statusBar.foreground": "#ffffff",
+            "statusBar.background": "#000000",
+            "activityBar.foreground": "#ffffff",
+            "tab.activeForeground": "#fbff00",
+            "tab.inactiveForeground": "#ffffff"
+        },
+        "[Monokai]": {
+            "editor.lineHighlightBackground": "#000000"
+        },
         "statusBar.background": "#005f5f",
         "statusBar.noFolderBackground": "#005f5f",
         "statusBar.debuggingBackground": "#005f5f"
+    },
+    "editor.tokenColorCustomizations": {
+        "[Monokai]": {
+            "textMateRules": [
+                {
+                    "scope": "entity.name.type",
+                    "settings": {
+                        "fontStyle": "bold"
+                    }
+                },
+                {
+                    "scope": "entity.name.namespace",
+                    "settings": {
+                        "fontStyle": ""
+                    }
+                }
+            ]
+        }
     },
     "java.project.importOnFirstTimeStartup": "automatic",
     "java.refactor.renameFromFileExplorer": "autoApply",
@@ -102,8 +130,7 @@
             "before": [
                 "<leader>",
                 "r",
-                "u",
-                "n"
+                "u"
             ],
             "commands": [
                 "workbench.action.debug.start"
@@ -136,7 +163,8 @@
             "commands": [
                 "workbench.view.explorer"
             ]
-        },{
+        },
+        {
             "before": [
                 "<leader>",
                 "o",
@@ -145,7 +173,8 @@
             "commands": [
                 "editor.action.organizeImports"
             ]
-        },{
+        },
+        {
             "before": [
                 "<leader>",
                 "q",
@@ -167,5 +196,17 @@
             ]
         }
     ],
-    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/chardinventura/.vscode-oss/extensions/gabrielbb.vscode-lombok-1.0.0/server/lombok.jar\""
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/chardinventura/.vscode-oss/extensions/gabrielbb.vscode-lombok-1.0.0/server/lombok.jar\"",
+    "editor.fontFamily": "'JuliaMono'",
+    "editor.renderWhitespace": "trailing",
+    "editor.fontLigatures": true,
+    "editor.inlineHints.fontFamily": "'JuliaMono'",
+    "debug.console.fontFamily": "JuliaMono",
+    "workbench.iconTheme": "material-icon-theme",
+    "files.autoSaveDelay": 1,
+    "emmet.triggerExpansionOnTab": true,
+    "vim.useCtrlKeys": true,
+    "workbench.colorTheme": "Monokai",
+    "editor.minimap.enabled": false,
+    "window.zoomLevel": -1
 }

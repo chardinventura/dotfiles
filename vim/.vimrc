@@ -34,7 +34,7 @@ set undodir=~/.vim/undodir
 set number
 set relativenumber
 set numberwidth=1
-set fillchars+=vert:\┊
+"set fillchars+=vert:\┊
 set encoding=utf-8 " Enable use unicode
 set splitbelow
 set splitright

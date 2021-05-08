@@ -1,0 +1,18 @@
+Theme = /usr/share/moc/themes/nightly_theme
+
+Sort = FileName
+
+Repeat = yes
+Shuffle = yes
+
+AutoLoadLyrics = no
+
+PlaylistFullPaths = no
+
+MusicDir = /home/chardinventura/Music
+
+CanStartInPlaylist = no
+
+Layout1 = playlist(0,0,100%,100%)
+Layout2 = ""
+Layout3 = ""

@@ -17,13 +17,13 @@ font pango:JuliaMono 8
 #font pango:DejaVu Sans Mono 8
 
 # Use amixer to adjust volume in PulseAudio.
-bindsym Mod1+o exec amixer -q -D pulse sset Master 2%+ # && pkill -RTMIN+1 i3blocks
-bindsym Mod1+a exec amixer -q -D pulse sset Master 2%- # && pkill -RTMIN+1 i3blocks
-bindsym Mod1+m exec amixer -q -D pulse sset Master toggle # && pkill -RTMIN+1 i3blocks
+bindsym Mod1+o exec amixer -q -D pulse sset Master 2%+
+bindsym Mod1+a exec amixer -q -D pulse sset Master 2%-
+bindsym Mod1+m exec amixer -q -D pulse sset Master toggle
 
 # Use xbacklight to adjust brightness
-bindsym Mod1+u $exec brightnessctl s 7+ # && pkill -RTMIN+2 i3blocks
-bindsym Mod1+e $exec brightnessctl s 7- # && pkill -RTMIN+2 i3blocks
+bindsym Mod1+u $exec brightnessctl s 7+
+bindsym Mod1+e $exec brightnessctl s 7-
 
 # Media player controls
 bindsym Mod1+p exec playerctl play-pause
@@ -149,6 +149,12 @@ mode "resize" {
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
+
+		# Move containers
+		bindsym Control+h move left 10 px
+		bindsym Control+l move right 10 px
+		bindsym Control+j move down 10 px
+		bindsym Control+k move up 10 px
 
         # back to normal: Enter or Escape or Mod1+r
         bindsym Return mode "default"

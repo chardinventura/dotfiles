@@ -10,7 +10,7 @@ block = "backlight"
 [[block]]
 block = "cpu"
 interval = 1
-format = "{barchart} {frequency}GHz {utilization}%"
+format = "{barchart} {frequency}GHz {utilization}"
 
 [[block]]
 block = "memory"
