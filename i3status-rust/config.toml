@@ -1,5 +1,6 @@
 theme = "modern"
 icons = "awesome"
+scrolling= "natural"
 
 [[block]]
 block = "sound"
@@ -15,7 +16,7 @@ format = "{barchart} {frequency}GHz {utilization}"
 [[block]]
 block = "memory"
 display_type = "memory"
-format_mem = "{Mug} GiB"
+format_mem = "{mem_used;G} GiB"
 format_swap = "{SUp}%"
 
 [[block]]
