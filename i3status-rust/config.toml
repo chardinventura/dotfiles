@@ -16,8 +16,8 @@ format = "{barchart} {frequency}GHz {utilization}"
 [[block]]
 block = "memory"
 display_type = "memory"
-format_mem = "{mem_used;G} GiB"
-format_swap = "{SUp}%"
+format_mem = "{mem_used;G}"
+format_swap = "{swap_used;G}"
 
 [[block]]
 block = "battery"

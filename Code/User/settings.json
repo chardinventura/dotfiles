@@ -4,7 +4,11 @@
         "**/.classpath": true,
         "**/.project": true,
         "**/.settings": true,
-        "**/.factorypath": true
+        "**/.factorypath": true,
+        "**/bin": true,
+        "**/.gradle": true,
+        "**/build": true,
+        "**/gradle": true
     },
     "java.configuration.updateBuildConfiguration": "automatic",
     "java.signatureHelp.enabled": true,
@@ -196,7 +200,7 @@
             ]
         }
     ],
-    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/chardinventura/.vscode-oss/extensions/gabrielbb.vscode-lombok-1.0.0/server/lombok.jar\"",
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/chardinventura/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
     "editor.fontFamily": "'JuliaMono'",
     "editor.renderWhitespace": "trailing",
     "editor.fontLigatures": true,
@@ -208,7 +212,6 @@
     "vim.useCtrlKeys": true,
     "workbench.colorTheme": "Monokai",
     "editor.minimap.enabled": false,
-    "window.zoomLevel": -1,
     "[yaml]": {
         "editor.insertSpaces": false,
         "editor.tabSize": 2,
@@ -218,5 +221,8 @@
     "spring.initializr.defaultJavaVersion": "11",
     "spring.initializr.defaultLanguage": "Java",
     "spring.initializr.defaultOpenProjectMethod": "Open",
-    "spring.initializr.defaultPackaging": "JAR"
+    "spring.initializr.defaultPackaging": "JAR",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "window.zoomLevel": -1
 }

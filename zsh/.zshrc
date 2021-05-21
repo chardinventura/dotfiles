@@ -102,7 +102,10 @@ export EDITOR='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias refresh="exec zsh"
+alias refreshZsh="exec zsh"
+alias getCapacityBattery="cat /sys/class/power_supply/BAT0/capacity"
+alias setFreqCpu="sudo sh $HOME/Programming/bash/cpu.sh"
+alias batteryConservationMode="sh $HOME/Programming/bash/batteryConservationMode.sh"
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
