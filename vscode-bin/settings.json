@@ -51,7 +51,6 @@
         }
     },
     "java.project.importOnFirstTimeStartup": "automatic",
-    "java.refactor.renameFromFileExplorer": "autoApply",
     "vim.highlightedyank.enable": true,
     "vim.useSystemClipboard": true,
     "vim.camelCaseMotion.enable": true,
@@ -69,6 +68,15 @@
         {
             "before": [
                 "<leader>",
+                "d"
+            ],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
                 "n"
             ],
             "commands": [
@@ -78,10 +86,21 @@
         {
             "before": [
                 "<leader>",
-                "p"
+                "N"
             ],
             "commands": [
                 ":bprevious"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "t",
+                "e",
+                "r"
+            ],
+            "commands": [
+                "workbench.action.terminal.toggleTerminal"
             ]
         },
         {
@@ -224,5 +243,10 @@
     "spring.initializr.defaultPackaging": "JAR",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.cursorStyle": "line",
+    "editor.insertSpaces": false,
+    "editor.lineNumbers": "on",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
     "window.zoomLevel": -1
 }

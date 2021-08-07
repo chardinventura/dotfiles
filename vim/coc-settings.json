@@ -1,0 +1,26 @@
+{
+	"languageserver": {
+		"clojure-lsp": {
+			"command": "bash",
+			"args": [
+				"-c",
+				"clojure-lsp"
+			],
+			"filetypes": [
+				"clojure"
+			],
+			"rootPatterns": [
+				"project.clj"
+			],
+			"additionalSchemes": [
+				"jar",
+				"zipfile"
+			],
+			"trace.server": "verbose",
+			"initializationOptions": {}
+		}
+	},
+	"yaml.format.enable": true,
+  "html.format.extraLiners": "",
+  "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"/home/chardinventura/.config/coc/extensions/node_modules/coc-java-lombok/jar/lombok.jar\""
+}

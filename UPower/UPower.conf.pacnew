@@ -62,9 +62,9 @@ UsePercentageForPolicy=true
 # PercentageLow=10
 # PercentageCritical=3
 # PercentageAction=2
-PercentageLow=20
-PercentageCritical=10
-PercentageAction=9
+PercentageLow=10
+PercentageCritical=3
+PercentageAction=2
 
 # When UsePercentageForPolicy is false, the time remaining at which UPower
 # will consider the battery low, critical, or take action for the critical
@@ -78,8 +78,8 @@ PercentageAction=9
 # TimeCritical=300
 # TimeAction=120
 TimeLow=1200
-TimeCritical=0
-TimeAction=0
+TimeCritical=300
+TimeAction=120
 
 # The action to take when "TimeAction" or "PercentageAction" above has been
 # reached for the batteries (UPS or laptop batteries) supplying the computer

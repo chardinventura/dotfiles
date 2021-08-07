@@ -1,6 +1,12 @@
-theme = "modern"
-icons = "awesome"
-scrolling= "natural"
+[theme]
+name = "modern"
+
+[theme.overrides]
+idle_bg = "#282A36"
+idle_fg = "#F8F8F2"
+
+[icons ]
+name = "awesome"
 
 [[block]]
 block = "sound"

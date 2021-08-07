@@ -17,11 +17,11 @@ font pango:JuliaMono 8
 #font pango:DejaVu Sans Mono 8
 
 # Use amixer to adjust volume in PulseAudio.
-bindsym Mod1+o exec amixer set Master 2%+
-bindsym Mod1+a exec amixer set Master 2%-
-bindsym Mod1+Control+o exec amixer set Master 4%+
-bindsym Mod1+Control+a exec amixer set Master 4%-
-bindsym Mod1+m exec amixer set Master toggle
+bindsym Mod1+o exec amixer -D pulse sset Master 1%+
+bindsym Mod1+a exec amixer -D pulse sset Master 1%-
+bindsym Mod1+Control+o exec amixer -D pulse sset Master 2%+
+bindsym Mod1+Control+a exec amixer -D pulse sset Master 2%-
+bindsym Mod1+m exec amixer -D pulse sset Master toggle
 
 # Use xbacklight to adjust brightness
 bindsym Mod1+u $exec brightnessctl s 7+
@@ -40,14 +40,12 @@ bindsym Mod1+Control+period exec mocp --next
 bindsym Mod1+Control+comma exec mocp --previous
 
 # Print screen
-bindsym Print exec (flameshot &) && flameshot full -p $HOME/Pictures
-bindsym Control+Print exec (flameshot &) && flameshot full -c
+bindsym Print exec (flameshot &) && sleep 1 && flameshot full -p $HOME/Pictures
+bindsym Control+Print exec (flameshot &) && sleep 1 && flameshot full -c
 bindsym Control+Shift+Print exec (flameshot &) && sleep 1 && flameshot gui
-# set wallpaper
-$exec feh --no-fehbg --bg-fill '/home/chardinventura/Pictures/wallpapers/desktop.png'
 
 # Suspend after 10 mts when pr is inactive
-$exec xautolock -time 10 -locker "i3lock -i ~/Pictures/wallpapers/desktop.png ; systemctl suspend"
+$exec xautolock -time 10 -locker "i3lock -e -f -c 000000; systemctl suspend"
 
 # Suspend pc
 bindsym Mod1+Shift+s exec xautolock -locknow
@@ -60,6 +58,7 @@ bindsym Mod1+Shift+t kill
 
 # A more modern dmenu replacement is rofi:
 bindsym Mod1+d exec "rofi -modi drun,run,file-browser -show drun"
+# bindsym Mod1+d exec dmenu_run
 
 # enter fullscreen mode for the focused container
 bindsym Mod1+f fullscreen toggle
@@ -80,6 +79,9 @@ bindsym Mod1+Shift+l move right
 bindsym Mod1+control+j layout stacking
 bindsym Mod1+control+k layout tabbed
 bindsym Mod1+control+l layout toggle split
+
+bindsym Mod1+s splith
+bindsym Mod1+v splitv
 
 # toggle tiling / floating
 bindsym Mod1+Control+space floating toggle
@@ -139,26 +141,14 @@ bindsym Mod1+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
+        # Pressing h will shrink the window’s width.
+        # Pressing k will grow the window’s width.
         # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
+        # Pressing j will grow the window’s height.
         bindsym h resize shrink width 10 px or 10 ppt
         bindsym j resize grow height 10 px or 10 ppt
         bindsym k resize shrink height 10 px or 10 ppt
         bindsym l resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-		# Move containers
-		bindsym Control+h move left 10 px
-		bindsym Control+l move right 10 px
-		bindsym Control+j move down 10 px
-		bindsym Control+k move up 10 px
 
         # back to normal: Enter or Escape or Mod1+r
         bindsym Return mode "default"
@@ -166,7 +156,22 @@ mode "resize" {
         bindsym Mod1+r mode "default"
 }
 
+mode "move" {
+
+		# Move containers
+		bindsym h move left 10 px
+		bindsym l move right 10 px
+		bindsym j move down 10 px
+		bindsym k move up 10 px
+
+        # back to normal: Enter or Escape or Mod1+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym Mod1+Control+r mode "default"
+}
+
 bindsym Mod1+r mode "resize"
+bindsym Mod1+Control+r mode "move"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -179,17 +184,28 @@ bindsym Mod1+r mode "resize"
 #    	}
 #}
 
+# class                 border  bground text    indicator child_border
+client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
+
+client.background       #F8F8F2
+
 bar {
 	position top
 	status_command /bin/i3status-rs ~/.config/i3status-rust/config.toml
 
 	colors {
-        separator #666666
-        background #222222
-        statusline #dddddd
-        focused_workspace #0088CC #0088CC #ffffff
-        active_workspace #333333 #333333 #ffffff
-        inactive_workspace #333333 #333333 #888888
-        urgent_workspace #2f343a #900000 #ffffff
+    	background #282A36
+    	statusline #F8F8F2
+    	separator  #44475A
+
+    	focused_workspace  #44475A #44478A #F8F8F2
+    	active_workspace   #282A36 #44475A #F8F8F2
+    	inactive_workspace #282A36 #282A36 #BFBFBF
+    	urgent_workspace   #FF5555 #FF5555 #F8F8F2
+    	binding_mode       #FF5555 #FF5555 #F8F8F2
     }
 }
