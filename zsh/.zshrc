@@ -1,16 +1,8 @@
-export ZSH="/home/chardinventura/.oh-my-zsh"
 export EDITOR='vim'
-export LANG=en_US.UTF-8
 export ARCHFLAGS="-arch x86_64"
-
-ZSH_THEME="dracula"
-
-plugins=(git archlinux zsh-syntax-highlighting zsh-autosuggestions battery)
+export ZSH="/usr/share/oh-my-zsh"
 
 source $ZSH/oh-my-zsh.sh
-
-# Battery
-RPROMPT='$(battery_pct_prompt)'
 
 # Aliases
 alias refreshZsh="exec zsh"
@@ -19,17 +11,34 @@ alias setFreqCpu="sudo sh $HOME/Programming/bash/cpu.sh"
 alias batteryConservationMode="sh $HOME/Programming/bash/batteryConservationMode.sh"
 alias ls="echo 'Use exa'"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-###__conda_setup="$('/opt/anaconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-###if [ $? -eq 0 ]; then
-###    eval "$__conda_setup"
-###else
-###    if [ -f "/opt/anaconda/etc/profile.d/conda.sh" ]; then
-###        . "/opt/anaconda/etc/profile.d/conda.sh"
-###    else
-###        export PATH="/opt/anaconda/bin:$PATH"
-###    fi
-###fi
-###unset __conda_setup
-# <<< conda initialize <<<
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# OhMyZsh plugins
+zinit ice wait"2" lucid
+zinit snippet OMZP::git
+zinit snippet OMZP::archlinux
+zinit snippet OMZP::battery
+zinit snippet OMZP::vi-mode
+
+# other plugins
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+
+# Theme
+zinit light dracula/zsh
+
+# RPROMPT
+RPROMPT='$(battery_pct_prompt)'
+
+# Edit line in vim with ctrl-e:
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^e' edit-command-line
+
+# Use vim keys in tab complete menu:
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -v '^?' backward-delete-char
