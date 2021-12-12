@@ -53,10 +53,16 @@ bindsym Control+Print exec (flameshot &) && sleep 1 && flameshot full -c
 bindsym Control+Shift+Print exec (flameshot &) && sleep 1 && flameshot gui
 
 # Suspend after 10 mts when pr is inactive
-$exec xautolock -time 10 -locker "i3lock -e -f -c 000000; systemctl suspend"
+# $exec xautolock -time 10 -locker "i3lock -e -f -c 000000; systemctl suspend" &
+
+# Set wallpaper
+$exec ~/.fehbg &
+#
+# Set video wallpaper
+# $exec xwinwrap -ov -fs -ni -- mpv -wid WID -quiet -loop ~/Videos/background.mp4 &
 
 # Suspend pc
-bindsym Mod1+Shift+s exec xautolock -locknow
+# bindsym Mod1+Shift+s exec xautolock -locknow
 
 # start a terminal
 bindsym Mod1+Return exec alacritty
@@ -65,7 +71,9 @@ bindsym Mod1+Return exec alacritty
 bindsym Mod1+Shift+t kill
 
 # A more modern dmenu replacement is rofi:
-bindsym Mod1+d exec "rofi -modi drun,run,file-browser -show drun"
+# outdate, it is not file-browser
+# bindsym Mod1+d exec "rofi -modi drun,run,file-browser -show drun"
+bindsym Mod1+d exec "rofi -modi drun,run,filebrowser -show drun"
 # bindsym Mod1+d exec dmenu_run
 
 # enter fullscreen mode for the focused container

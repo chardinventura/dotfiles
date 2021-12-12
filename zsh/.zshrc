@@ -1,4 +1,4 @@
-export EDITOR='vim'
+export EDITOR="vim"
 export ARCHFLAGS="-arch x86_64"
 export ZSH="/usr/share/oh-my-zsh"
 
@@ -10,6 +10,9 @@ alias getCapacityBattery="cat /sys/class/power_supply/BAT0/capacity"
 alias setFreqCpu="sudo sh $HOME/Programming/bash/cpu.sh"
 alias batteryConservationMode="sh $HOME/Programming/bash/batteryConservationMode.sh"
 alias ls="echo 'Use exa'"
+alias recordScreen="ffmpeg -f x11grab -video_size 1360x768 -framerate 30 -i :0.0 -f pulse -i 0 -f pulse -i 1 -c:v libx264 -filter_complex \"[1][2]amix[out]\" -map 0 -map \"[out]\" -c:a flac"
+alias recordInternal="ffmpeg -f pulse -i 0"
+alias recordMicrophone="ffmpeg -f pulse -i 1"
 
 source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit

@@ -22,5 +22,6 @@
 	},
 	"yaml.format.enable": true,
   "html.format.extraLiners": "",
-  "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"/home/chardinventura/.config/coc/extensions/node_modules/coc-java-lombok/jar/lombok.jar\""
+  "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:\"/home/chardinventura/.config/coc/extensions/node_modules/coc-java-lombok/jar/lombok.jar\"",
+  "clangd.path": "/home/chardinventura/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin/clangd"
 }

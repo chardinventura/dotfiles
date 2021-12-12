@@ -1,9 +1,13 @@
 set rnu
+set ideajoin
 set NERDTree
 set easymotion
 set clipboard+=unnamed
 
-:map gh <Action>(QuickJavaDoc)
+:map <S>k <Action>(QuickJavaDoc)
+:map gi <Action>(GotoImplementation)
+:map gd <Action>(GotoDeclaration)
+:map gD <Action>(GotoTypeDeclaration)
 
 let mapleader = " "
 
