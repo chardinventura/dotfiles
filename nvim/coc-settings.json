@@ -1,0 +1,10 @@
+{
+	"languageserver": {
+		"clojure": {
+			"command": "C:\\Users\\chard\\AppData\\Local\\nvim-data\\lsp\\clojure-lsp.exe",
+			"filetypes": ["clojure"]
+		}
+  },
+  "html.format.extraLiners": "",
+  "snippets.ultisnips.pythonPrompt": false
+}
