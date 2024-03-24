@@ -87,7 +87,11 @@ y = 0
 
 [window]
 dynamic_title = true
+
+[scrolling]
 history = 10000
+
+[selection]
 semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 
 [window.padding]
