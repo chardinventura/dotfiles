@@ -88,7 +88,6 @@ y = 0
 [window]
 dynamic_title = true
 history = 10000
-save_to_clipboard = true
 semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 
 [window.padding]
