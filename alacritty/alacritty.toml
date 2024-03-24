@@ -62,7 +62,6 @@ text = "CellBackground"
 blinking = "Never"
 
 [font]
-ligatures = true
 size = 10.0
 
 [font.bold]
