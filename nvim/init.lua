@@ -1,6 +1,4 @@
 -- Commands
-vim.cmd[[colorscheme dracula]]
-
 vim.cmd[[
 	highlight CocWarningSign ctermfg=190
 	highlight CocUnusedHighlight ctermfg=190
