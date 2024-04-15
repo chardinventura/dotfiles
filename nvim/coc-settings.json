@@ -1,0 +1,9 @@
+{
+	"languageserver": {
+		"clojure": {
+			"command": "/usr/bin/clojure-lsp",
+			"filetypes": ["clojure"]
+		}
+	},
+	"snippets.ultisnips.pythonPrompt": false
+}
