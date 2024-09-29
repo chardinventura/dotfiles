@@ -1,4 +1,4 @@
-export EDITOR="vim"
+export EDITOR="nvim"
 export ARCHFLAGS="-arch x86_64"
 export ZSH="/usr/share/oh-my-zsh"
 export ZINIT="/usr/share/zinit"
