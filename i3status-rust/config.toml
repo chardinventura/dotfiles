@@ -14,7 +14,10 @@ bat_not_available = "|?|"
 [[block]]
 block = "sound"
 step_width = 3
-format = "$icon"
+format = "$icon $volume $output_name - $active_port"
+[block.mappings]
+"alsa_output.pci-0000_00_1f.3.analog-stereo" = "Speaker"
+"alsa_output.usb-Generic_USB_Audio-00.analog-stereo" = "Headset"
 
 [[block]]
 block = "backlight"
@@ -50,7 +53,14 @@ format_alt = " $icon $total ($used+$available)"
 [[block]]
 block = "battery"
 driver = "upower"
-format = " $icon $percentage "
+format = "$icon $percentage"
+
+[[block]]
+block = "temperature"
+format = " $icon $max max "
+format_alt = " $icon $min min, $max max, $average avg "
+interval = 1
+chip = "*-isa-*"
 
 [[block]]
 block = "time"
