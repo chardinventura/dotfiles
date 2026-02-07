@@ -1,7 +1,6 @@
 essential=(
-	linux-lts
+	linux
 	linux-firmware
-	linux-lts-headers
 	base
 	base-devel
 	grub
@@ -42,6 +41,7 @@ setup=(
 	evince
 	pavucontrol
 	moc
+	moc-pulse
 	mpv
 	intel-media-driver
 	libva-intel-driver
@@ -52,7 +52,8 @@ setup=(
 	ttf-nerd-fonts-symbols
 	pipewire
 	pipewire-alsa
-	pipewire-pulseaudio
+	pipewire-pulse
+	pipewire-jack
 	playerctl
 	tree
 	unrar
