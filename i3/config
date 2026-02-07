@@ -19,11 +19,11 @@ font pango:JuliaMono 12
 # Use amixer to adjust volume in PulseAudio.
 # only amixer
 
-bindsym Mod1+o exec amixer sset Master 1%+
-bindsym Mod1+a exec amixer sset Master 1%-
-bindsym Mod1+Control+o exec amixer sset Master 2%+
-bindsym Mod1+Control+a exec amixer sset Master 2%-
-bindsym Mod1+m exec amixer -D pulse sset Master toggle
+bindsym Mod1+o exec pulsemixer --change-volume 1
+bindsym Mod1+a exec pulsemixer --change-volume -1
+bindsym Mod1+Control+o exec pulsemixer --change-volume 2
+bindsym Mod1+Control+a exec pulsemixer --change-volume -2
+bindsym Mod1+m exec pulsemixer --toggle-mute
 # amixer + pulseaudio
 #bindsym Mod1+o exec amixer -D pulse sset Master 1%+
 #bindsym Mod1+a exec amixer -D pulse sset Master 1%-

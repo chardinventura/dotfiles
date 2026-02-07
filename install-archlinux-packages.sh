@@ -39,7 +39,7 @@ setup=(
 	flameshot
 	google-chrome
 	evince
-	pavucontrol
+	pulsemixer
 	moc
 	moc-pulse
 	mpv
