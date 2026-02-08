@@ -60,6 +60,8 @@ setup=(
 	zinit
 	oh-my-zsh-git
 	zsh
+	nodejs
+	npm
 	jq
 )
 
