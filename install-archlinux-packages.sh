@@ -119,5 +119,5 @@ read decision
 
 if [[ $decision == "yes" ]]; then
 	echo ""
-	yay -S $packages_to_install
+	yay -Syu $packages_to_install
 fi
