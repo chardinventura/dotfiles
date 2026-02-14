@@ -32,10 +32,10 @@ bindsym Mod1+m exec pulsemixer --toggle-mute
 #bindsym Mod1+m exec amixer -D pulse sset Master toggle
 
 # Use xbacklight to adjust brightness
-bindsym Mod1+u $exec brightnessctl s 7+
-bindsym Mod1+e $exec brightnessctl s 7-
-bindsym Mod1+Control+u $exec brightnessctl s 14+
-bindsym Mod1+Control+e $exec brightnessctl s 14-
+bindsym Mod1+u $exec brightnessctl s 1+
+bindsym Mod1+e $exec brightnessctl s 1-
+bindsym Mod1+Control+u $exec brightnessctl s 2+
+bindsym Mod1+Control+e $exec brightnessctl s 2-
 
 # Media player controls
 bindsym Mod1+p exec playerctl play-pause
