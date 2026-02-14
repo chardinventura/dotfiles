@@ -10,7 +10,7 @@ set $exec exec --no-startup-id
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # font pango:monospace 8
-font pango:JuliaMono 12
+font pango:JuliaMono 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -75,6 +75,9 @@ bindsym Mod1+Shift+t kill
 # bindsym Mod1+d exec "rofi -modi drun,run,file-browser -show drun"
 bindsym Mod1+d exec "rofi -modi drun,run,filebrowser -show drun"
 # bindsym Mod1+d exec dmenu_run
+
+bindsym Mod1+x exec sh ~/.config/i3/toggle_laptop_screen.sh
+bindsym Mod1+Shift+x exec sh ~/.config/i3/toggle_monitor_modes.sh
 
 # enter fullscreen mode for the focused container
 bindsym Mod1+f fullscreen toggle
