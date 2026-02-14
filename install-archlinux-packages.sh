@@ -24,7 +24,7 @@ setup=(
 	brightnessctl
 	exa
 	gotop
-	nvidia-open-dkms-git
+	nvidia-580xx-dkms
 	xorg-server
 	xorg-xinit
 	i3-wm
