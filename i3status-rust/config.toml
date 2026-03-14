@@ -1,20 +1,16 @@
 [theme]
-theme = "modern"
-[theme.overrides]
-idle_bg = "#282A36"
-idle_fg = "#F8F8F2"
+theme = "ctp-latte"
 
 [icons ]
 icons = "awesome4"
 [icons.overrides]
-#bat = ["|E|", "|_|", "|=|", "|F|"]
 bat_charging = ["|^|"]
 bat_not_available = "|?|"
 
 [[block]]
 block = "sound"
 step_width = 3
-format = "$icon $volume $output_name - $active_port"
+format = "$icon $volume $output_name"
 [block.mappings]
 "alsa_output.pci-0000_00_1f.3.analog-stereo" = "Speaker"
 "alsa_output.usb-Generic_USB_Audio-00.analog-stereo" = "Headset"
@@ -33,7 +29,7 @@ critical_cpu = 90
 [[block]]
 block = "nvidia_gpu"
 interval = 1
-format = " $icon RTX 4080 ($clocks $utilization $temperature)"
+format = " $icon $clocks $utilization $temperature"
 
 [[block]]
 block = "memory"
